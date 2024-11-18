@@ -4,6 +4,10 @@ const btnSubmit = formulario.querySelector("button[type='submit']");
 const inputTitulo = document.getElementById('titulo');
 const inputAutor = document.getElementById('autor');
 const inputFecha = document.getElementById('fecha');
+const btnOrdenarTitulo = document.querySelector('.ordenarTitulo');
+const btnOrdenarAutor = document.querySelector('.ordenarAutor');
+const btnOrdenarFecha = document.querySelector('.ordenarFecha');
+const btnBorrarTodos = document.querySelector('.borrarTodos');
 
 let librosGuardados = JSON.parse(localStorage.getItem('libros')) || [];
 
@@ -219,4 +223,8 @@ function guardarLibros() {
 
 formulario.addEventListener('submit', manejarFormulario);
 ordenarPorFechaDescendente(libros);
+btnOrdenarTitulo.addEventListener('click', ordenarPorTitulo);
+btnOrdenarAutor.addEventListener('click', ordenarPorAutor);
+btnOrdenarFecha.addEventListener('click', toggleOrdenFecha);
+btnBorrarTodos.addEventListener('click', borrarTodosLosLibros);
 renderizarLibros();

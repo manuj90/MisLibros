@@ -46,18 +46,10 @@
         <h2 class="text-center mb-4">Lista de libros</h2>
         <div class="book-list-container">
           <div class="sorting-buttons">
-            <button class="btn btn-outline-primary" onclick="ordenarPorTitulo()">
-              Ordenar por Título
-            </button>
-            <button class="btn btn-outline-primary" onclick="ordenarPorAutor()">
-              Ordenar por Autor
-            </button>
-            <button class="btn btn-outline-primary" onclick="toggleOrdenFecha()">
-              Ordenar por Fecha
-            </button>
-            <button class="btn btn-outline-danger" onclick="borrarTodosLosLibros()">
-              Borrar Todos
-            </button>
+            <button class="btn btn-outline-primary ordenarTitulo">Ordenar por Título</button>
+            <button class="btn btn-outline-primary ordenarAutor">Ordenar por Autor</button>
+            <button class="btn btn-outline-primary ordenarFecha">Ordenar por Fecha</button>
+            <button class="btn btn-outline-danger borrarTodos">Borrar Todos</button>
           </div>
           <ul class="list-group" id="lista-libros">
           </ul>
